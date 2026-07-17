@@ -1,7 +1,16 @@
 import type { Metadata } from 'next';
+import { EB_Garamond } from 'next/font/google';
 import './globals.css';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
+
+const ebGaramond = EB_Garamond({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-eb-garamond',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: { default: 'Tejasri Gururaj', template: '%s | Tejasri Gururaj' },
@@ -10,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={ebGaramond.variable}>
       <body style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: 'var(--surface-page)', margin: 0 }}>
         <header style={{ position: 'sticky', top: 0, zIndex: 10 }}>
           <SiteNav />
