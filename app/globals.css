@@ -157,13 +157,13 @@ img { max-width: 100%; display: block; }
 /* ── Category tag pills ─────────────────────────────────────── */
 .tg-tag {
   display: inline-block;
-  padding: 4px 12px;
+  padding: 3px 10px;
   border-radius: var(--radius-sm);
   font-family: var(--font-serif);
-  font-size: var(--text-xs);
+  font-size: var(--text-2xs);
   font-weight: var(--fw-medium);
   letter-spacing: var(--ls-wide);
-  text-transform: uppercase;
+  text-transform: lowercase;
   text-decoration: none;
 }
 .tg-tag--teal { background: var(--c-teal-200); color: var(--c-teal-600); }
