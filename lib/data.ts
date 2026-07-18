@@ -26,7 +26,6 @@ export interface Post {
   title: string;
   excerpt: string;
   image?: string;
-  comingSoon?: boolean;
   body: BodyBlock[];
 }
 
@@ -153,17 +152,6 @@ export const POSTS: Post[] = [
       { p: "If you think that I've made a mistake, please contact me! But present actual sources and concrete facts, and I will retract/make changes. Of course, I will do my due diligence to ensure that the information is factually correct. But, at the end of the day, I'm human too." },
       { p: 'See you in the first blog post!' },
     ],
-  },
-  {
-    slug: 'running-walking-rain',
-    category: 'Weather',
-    icon: '/assets/icons/astronomy.png',
-    date: 'Coming soon',
-    dateISO: null,
-    title: 'Why does running and walking in the rain get you drenched by the same amount?',
-    excerpt: 'A classic puzzle with a surprisingly involved answer. This one is still in the works — check back soon.',
-    comingSoon: true,
-    body: [],
   },
 ];
 
