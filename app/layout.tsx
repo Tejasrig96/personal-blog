@@ -13,8 +13,20 @@ const ebGaramond = EB_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://tejasrigururaj.com'),
   title: { default: 'Tejasri Gururaj', template: '%s | Tejasri Gururaj' },
   description: 'Freelance science writer and journalist based in India, telling stories about research in a way that resonates with everyone.',
+  openGraph: {
+    type: 'website',
+    siteName: 'Tejasri Gururaj',
+    title: 'Tejasri Gururaj',
+    description: 'Freelance science writer and journalist based in India, telling stories about research in a way that resonates with everyone.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Tejasri Gururaj',
+    description: 'Freelance science writer and journalist based in India, telling stories about research in a way that resonates with everyone.',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
