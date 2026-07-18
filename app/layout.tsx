@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { EB_Garamond } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
         <main style={{ flex: 1 }}>{children}</main>
         <SiteFooter />
+        <Analytics />
       </body>
     </html>
   );
