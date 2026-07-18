@@ -23,23 +23,13 @@ export default async function Image() {
           background: '#b8c4bb',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: 56 }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={avatarSrc}
-            width={340}
-            height={340}
-            style={{ borderRadius: '50%', border: '8px solid #719e9f', objectFit: 'cover' }}
-          />
-          <div style={{ display: 'flex', flexDirection: 'column', maxWidth: 620 }}>
-            <div style={{ fontSize: 30, letterSpacing: 6, textTransform: 'uppercase', color: '#4a626f' }}>
-              Tejasri Gururaj
-            </div>
-            <div style={{ fontSize: 46, color: '#2d4654', marginTop: 14, lineHeight: 1.2 }}>
-              Science writer &amp; journalist
-            </div>
-          </div>
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={avatarSrc}
+          width={460}
+          height={460}
+          style={{ borderRadius: '50%', border: '10px solid #719e9f', objectFit: 'cover' }}
+        />
       </div>
     ),
     { ...size }
