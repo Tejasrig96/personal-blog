@@ -13,9 +13,10 @@ export interface Publication {
 }
 
 export type BodyBlock =
-  | { p: string; h?: never; img?: never; cap?: never }
-  | { h: string; p?: never; img?: never; cap?: never }
-  | { img: string; cap?: string; p?: never; h?: never };
+  | { p: string; h?: never; img?: never; cap?: never; widget?: never }
+  | { h: string; p?: never; img?: never; cap?: never; widget?: never }
+  | { img: string; cap?: string; p?: never; h?: never; widget?: never }
+  | { widget: 'rain-calculator'; p?: never; h?: never; img?: never; cap?: never };
 
 export interface Post {
   slug: string;
@@ -84,6 +85,19 @@ export const OTHER_PUBS = [
 ];
 
 export const POSTS: Post[] = [
+  {
+    slug: 'running-walking-rain',
+    category: 'Weather',
+    icon: '/assets/icons/astronomy.png',
+    date: 'Jul 18, 2026',
+    dateISO: '2026-07-18',
+    title: 'Blog #2: Why does running and walking in the rain get you drenched by the same amount?',
+    image: '/assets/blog/satellite-swirl.jpg',
+    excerpt: 'A classic question with a surprisingly involved answer. Play with the sliders and see for yourself how much drier running actually keeps you.',
+    body: [
+      { widget: 'rain-calculator' },
+    ],
+  },
   {
     slug: 'where-does-wind-begin',
     category: 'Physics',

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Tag from '@/components/Tag';
+import RainCalculator from '@/components/RainCalculator';
 import { POSTS } from '@/lib/data';
 
 export async function generateStaticParams() {
@@ -67,6 +68,9 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       )}
 
       {body.map((b, i) => {
+        if (b.widget === 'rain-calculator') {
+          return <RainCalculator key={i} />;
+        }
         if (b.h) {
           return (
             <h3 key={i} style={{ fontSize: 'var(--text-lg)', fontWeight: 'var(--fw-regular)', margin: '28px 0 10px', color: 'var(--c-ink)' }}>
